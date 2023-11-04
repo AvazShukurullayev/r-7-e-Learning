@@ -1,29 +1,30 @@
 import React from 'react';
 import homeIntro from "../img/home_intro.jpg"
 import styled from "styled-components";
+
 const AboutSection = () => {
     return (
         <About>
-            <div className="description">
+            <Description>
                 <div className="title">
-                    <div className="hide">
+                    <Hide>
                         <h2>Be educated so that</h2>
-                    </div>
-                    <div className="hide">
-                        <h2>you can change</h2>
-                    </div>
-                    <div className="hide">
+                    </Hide>
+                    <Hide>
+                        <h2>you <span>can change</span></h2>
+                    </Hide>
+                    <Hide>
                         <h2>the world.</h2>
-                    </div>
+                    </Hide>
                 </div>
                 <p>
                     An educated mind can teach many. An educated mind is better than empty one.
                 </p>
                 <button>About us</button>
-            </div>
-            <div className="image">
+            </Description>
+            <Image>
                 <img src={homeIntro} alt="man is reading a book"/>
-            </div>
+            </Image>
         </About>
     );
 };
@@ -35,7 +36,22 @@ const About = styled.div`
   justify-content: space-between;
   padding: 2rem;
 `
+const Description = styled.div`
+  flex: 1;
+  padding-right: 5rem;
+`
+const Hide = styled.div`
+  overflow: hidden;
+`
+const Image = styled.div`
+  flex: 1;
+  overflow: hidden;
 
-
-
+  img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    object-position: top center;
+  }
+`
 export default AboutSection;
