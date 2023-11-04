@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'SF Pro Display', sans-serif;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   button {
     font-weight: bold;
     font-size: 1.1rem;
@@ -40,16 +44,16 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     font-weight: bold;
   }
-  
+
   span {
     color: #30bee1;
     font-weight: bold;
   }
-  
-  a{ 
+
+  a {
     font-size: 1.1rem;
   }
-  
+
   p {
     padding: 3rem 0;
     color: #ccc;

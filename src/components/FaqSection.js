@@ -46,6 +46,7 @@ const Faq = styled(About)`
 
   h2 {
     margin-bottom: 2rem;
+    font-weight: lighter;
   }
 
   .question {
