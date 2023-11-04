@@ -1,8 +1,9 @@
 import React from 'react';
 import homeIntro from "../img/home_intro.jpg"
+import styled from "styled-components";
 const AboutSection = () => {
     return (
-        <div>
+        <About>
             <div className="description">
                 <div className="title">
                     <div className="hide">
@@ -23,8 +24,18 @@ const AboutSection = () => {
             <div className="image">
                 <img src={homeIntro} alt="man is reading a book"/>
             </div>
-        </div>
+        </About>
     );
 };
+
+// Styled Components
+const About = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+`
+
+
 
 export default AboutSection;
