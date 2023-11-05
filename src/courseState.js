@@ -1,8 +1,8 @@
 // Import images
 import react1 from "./img/react-1.jpg"
 import react2 from "./img/react-2.jpg"
-import js1 from "./img/js-1.jpg"
-import js2 from "./img/js-2.jpg"
+import js from "./img/js.png"
+import js4 from "./img/js4.jpg"
 import soon1 from "./img/soon-1.jpg"
 import soon2 from "./img/soon-2.jpg"
 
@@ -50,8 +50,8 @@ export const courseState = () => {
         },
         {
             title: "Interactive JavaScript",
-            mainImg: js1,
-            secondaryImg: js2,
+            mainImg: js,
+            secondaryImg: js4,
             url: "/courses/javascript",
             awards: [
                 {

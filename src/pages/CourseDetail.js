@@ -3,6 +3,7 @@ import {Container} from "../styles/styles";
 import styled from "styled-components";
 import {useHistory} from "react-router-dom";
 import {courseState} from "../courseState"
+import Award from "./Award";
 
 const CourseDetail = () => {
     const history = useHistory()
@@ -16,18 +17,45 @@ const CourseDetail = () => {
     }, [courses, url]);
     return (
         <>
-            {course && (<Container>
+            {course && (
                 <Details>
                     <Header>
-                        <h1>{course.title}</h1>
+                        <h2>{course.title}</h2>
                         <img src={course.mainImg} alt={course.title}/>
+                        <Container>
+                            <Awards>
+                                {course && course.awards.map((award, index) => (<Award award={award} key={index}/>))}
+                            </Awards>
+                        </Container>
+                        <img src={course.secondaryImg} alt={course.title}/>
                     </Header>
                 </Details>
-            </Container>)}
+            )}
         </>
 
     );
 };
 const Details = styled.div``
-const Header = styled.div``
+const Header = styled.div`
+  color: #fff;
+  padding-top: 10vh;
+
+  h2 {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
+  }
+`
+const Awards = styled.div`
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 2rem 0;
+`
 export default CourseDetail;
