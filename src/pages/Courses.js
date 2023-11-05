@@ -5,11 +5,12 @@ import {Link} from "react-router-dom";
 import reactImg from "../img/react.jpg"
 import jsImg from "../img/js.png"
 import fullStackImg from "../img/full.jpg"
-
+import {motion} from "framer-motion";
+import {pageAnimation} from "../animation";
 const Courses = () => {
     return (
         <Container>
-            <StyledCourses>
+            <StyledCourses variants={pageAnimation} initial={"hidden"} animate={"show"} exit={"exit"}>
                 <Course>
                     <h2>Interactive <span>React and Redux</span></h2>
                     <div className="line"></div>
@@ -35,7 +36,7 @@ const Courses = () => {
         </Container>
     );
 };
-const StyledCourses = styled.div`
+const StyledCourses = styled(motion.div)`
   min-height: 100vh;
 `
 const Course = styled.div`

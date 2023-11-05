@@ -4,6 +4,8 @@ import styled from "styled-components";
 import {useHistory} from "react-router-dom";
 import {courseState} from "../courseState"
 import Award from "./Award";
+import {pageAnimation} from "../animation";
+import {motion} from "framer-motion";
 
 const CourseDetail = () => {
     const history = useHistory()
@@ -18,7 +20,7 @@ const CourseDetail = () => {
     return (
         <>
             {course && (
-                <Details>
+                <Details variants={pageAnimation} initial={"hidden"} animate={"show"} exit={"exit"}>
                     <Header>
                         <h2>{course.title}</h2>
                         <img src={course.mainImg} alt={course.title}/>
@@ -35,7 +37,7 @@ const CourseDetail = () => {
 
     );
 };
-const Details = styled.div``
+const Details = styled(motion.div)``
 const Header = styled.div`
   color: #fff;
   padding-top: 10vh;
